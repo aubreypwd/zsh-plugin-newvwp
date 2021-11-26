@@ -28,12 +28,7 @@
 			fi
 		fi
 
-		if [[ -z "$1" ]]; then
-			newvwp --help
-			return
-		fi
-
-		if [[ "$1" == '--help' ]]; then
+		function newvwp_help {
 			echo "Please specify a site name, e.g.:"
 			echo
 			echo "newvwp example [--flags]"
@@ -43,6 +38,18 @@
 			echo " --debug-bar  Installs all debug-bar-* plugins and activates them."
 
 			return
+		}
+
+		if [[ -z "$1" ]]; then
+			newvwp_help && return
+		fi
+
+		if [[ "$1" == *"--"* ]]; then
+			newvwp_help && return
+		fi
+
+		if [[ "$1" == '--help' ]]; then
+			newvwp_help && return
 		fi
 
 		pwd=$(pwd)
