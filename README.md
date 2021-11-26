@@ -46,21 +46,13 @@ SAVE_QUERIES true
 - Username: `admin`
 - Password: `password`
 
-## MySQL
-
-This assumes you have `mysql` installed and uses `127.0.0.1` as `dbhost`, and `root` as `dbuser` w/out a password.
-
-It will attempt to create the database for you, but if it exists the install steps will fail!
-
-## TLD
-
-This also assumes you are using the `.test` TLD in it's messaging, but you can just ignore the messaging and use your TLD.
-
 ## Usage
 
 ```bash
-newvwp --spatie/ray --mailhog --debug-bar
+newvwp sitename --spatie/ray --mailhog --debug-bar
 ```
+
+Here `sitename` will create `sitename.test`.
 
 ### Flags
 
@@ -69,6 +61,20 @@ newvwp --spatie/ray --mailhog --debug-bar
 --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support.
 --debug-bar  Installs all debug-bar-* plugins and activates them.
 ```
+
+## MySQL
+
+This assumes you have `mysql` installed and uses `127.0.0.1` as `dbhost`, and `root` as `dbuser` w/out a password. It will attempt to create a database with the name you choose using:
+
+```bash
+newvwp example [flags]
+```
+
+So here it will create `example`.
+
+## TLD
+
+This also assumes you are using the `.test` TLD in it's messaging, but you can just ignore the messaging and use your TLD.
 
 ## Required Commands
 
