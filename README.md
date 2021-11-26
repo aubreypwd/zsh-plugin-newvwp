@@ -6,6 +6,8 @@ If you run this in an un-parked directory, it will prompt you to park the direct
 
 ## Constants
 
+These constants are set during setup, and are not customizable at the moment.
+
 ```
 DISABLE_WP_CRON true 
 EMPTY_TRASH_DAYS 0 
