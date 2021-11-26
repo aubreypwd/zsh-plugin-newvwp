@@ -52,6 +52,10 @@ This assumes you have `mysql` installed and uses `127.0.0.1` as `dbhost`, and `r
 
 It will attempt to create the database for you, but if it exists the install steps will fail!
 
+## TLD
+
+This also assumes you are using the `.test` TLD in it's messaging, but you can just ignore the messaging and use your TLD.
+
 ## Usage
 
 ```bash
