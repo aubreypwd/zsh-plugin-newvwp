@@ -64,7 +64,6 @@ newvwp --spatie/ray --mailhog --debug-bar
 --spatie/ray Installs https://spatie.be/products/ray support using Composer.
 --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support.
 --debug-bar  Installs all debug-bar-* plugins and activates them.
-
 ```
 
 ## Required Commands
