@@ -11,6 +11,25 @@
 	 ##
 	function newvwp {
 
+		###
+		 # Help for newvwp.
+		 #
+		 # E.g: Not for use.
+		 #
+		 # @since Friday, November 26, 2021
+		 ##
+		function newvwp_help {
+			echo "Please specify a site name, e.g.:"
+			echo
+			echo "newvwp example [--flags]"
+			echo
+			echo " --spatie/ray Installs https://spatie.be/products/ray support using Composer."
+			echo " --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support."
+			echo " --debug-bar  Installs all debug-bar-* plugins and activates them."
+
+			return
+		}
+
 		if ! [[ -x $(command -v valet) ]]; then
 			echo "Unable to find valet command, do you have it installed and in your PATH?"
 			return;
@@ -28,18 +47,6 @@
 			fi
 		fi
 
-		function newvwp_help {
-			echo "Please specify a site name, e.g.:"
-			echo
-			echo "newvwp example [--flags]"
-			echo
-			echo " --spatie/ray Installs https://spatie.be/products/ray support using Composer."
-			echo " --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support."
-			echo " --debug-bar  Installs all debug-bar-* plugins and activates them."
-
-			return
-		}
-
 		if [[ -z "$1" ]]; then
 			newvwp_help && return
 		fi
@@ -52,7 +59,7 @@
 			newvwp_help && return
 		fi
 
-		pwd=$(pwd)
+		local pwd=$(pwd)
 
 		if read -q "choice?Are you sure you want to park ${pwd} and create ./$1? [y/n]: "; then
 			echo
