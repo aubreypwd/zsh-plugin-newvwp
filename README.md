@@ -25,6 +25,8 @@ WP_DEBUG_LOG true
 FORCE_SSL_ADMIN true
 FORCE_SSL_LOGIN true
 SAVE_QUERIES true 
+WP_LOCAL_DEV true
+JETPACK_DEV_DEBUG true
 ```
 
 ## Debug Bar & Development plugins (`--debug-bar`)
