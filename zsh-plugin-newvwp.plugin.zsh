@@ -106,6 +106,8 @@
 									wp config set WP_DEBUG_LOG true --raw && \
 									wp config set FORCE_SSL_ADMIN true --raw && \
 									wp config set FORCE_SSL_LOGIN true --raw && \
+									wp config set WP_LOCAL_DEV true --raw && \
+									wp config set JETPACK_DEV_DEBUG true --raw && \
 									wp config set SAVE_QUERIES true --raw
 
 			if [[ "$@" == *"spatie/ray"* ]]; then
