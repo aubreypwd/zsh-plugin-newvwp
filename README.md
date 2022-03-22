@@ -6,27 +6,37 @@ If you run this in an un-parked directory, it will prompt you to park the direct
 
 ## Constants
 
-These constants are set during setup, and are not customizable at the moment.
+These constants are set during setup and are not customizable at the moment, just edit `wp-config.php` and make your changes there.
 
 ```
-DISABLE_WP_CRON true 
-EMPTY_TRASH_DAYS 0 
-WP_MAX_MEMORY_LIMIT 4096 
-WP_MEMORY_LIMIT 4096 
+BP_DEFAULT_COMPONENT 'staging-area'
+BP_XPROFILE_SLUG 'staging-area'
 COMPRESS_CSS false 
 COMPRESS_SCRIPTS false 
 CONCATENATE_SCRIPTS false 
+DISABLE_WP_CRON true 
+EMPTY_TRASH_DAYS 0 
 ENFORCE_GZIP false 
+EP_DASHBOARD_SYNC false 
+EP_HOST 'http://failed.tld/'
+FORCE_SSL_ADMIN true 
+FORCE_SSL_LOGIN true 
+FS_CHMOD_DIR 0775 
+FS_CHMOD_FILE 0664 
 FS_METHOD direct
-WP_DEBUG true 
+FS_METHOD direct 
+JETPACK_DEV_DEBUG true 
+SAVE_QUERIES true 
 SCRIPT_DEBUG true 
+WP_AUTO_UPDATE_CORE false 
+WP_CACHE false 
+WP_DEBUG true 
 WP_DEBUG_DISPLAY false 
 WP_DEBUG_LOG true 
-FORCE_SSL_ADMIN true
-FORCE_SSL_LOGIN true
-SAVE_QUERIES true 
-WP_LOCAL_DEV true
-JETPACK_DEV_DEBUG true
+WP_ENVIRONMENT_TYPE local 
+WP_LOCAL_DEV true 
+WP_MAX_MEMORY_LIMIT 4096 
+WP_MEMORY_LIMIT 4096 
 ```
 
 ## Debug Bar & Development plugins (`--debug-bar`)

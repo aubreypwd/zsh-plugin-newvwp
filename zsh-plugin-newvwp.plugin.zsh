@@ -91,24 +91,35 @@
 
 								echo && \
 								echo "Setting up constants..." && \
-									wp config set DISABLE_WP_CRON true --raw && \
-									wp config set EMPTY_TRASH_DAYS 0 --raw && \
-									wp config set WP_MAX_MEMORY_LIMIT 4096 --raw && \
-									wp config set WP_MEMORY_LIMIT 4096 --raw && \
+									wp config set BP_DEFAULT_COMPONENT 'staging-area' && \
+									wp config set BP_XPROFILE_SLUG 'staging-area' && \
 									wp config set COMPRESS_CSS false --raw && \
 									wp config set COMPRESS_SCRIPTS false --raw && \
 									wp config set CONCATENATE_SCRIPTS false --raw && \
+									wp config set DISABLE_WP_CRON true --raw && \
+									wp config set EMPTY_TRASH_DAYS 0 --raw && \
 									wp config set ENFORCE_GZIP false --raw && \
-									wp config set FS_METHOD direct && \
-									wp config set WP_DEBUG true --raw && \
-									wp config set SCRIPT_DEBUG true --raw && \
-									wp config set WP_DEBUG_DISPLAY false --raw && \
-									wp config set WP_DEBUG_LOG true --raw && \
+									wp config set EP_DASHBOARD_SYNC false --raw && \
+									wp config set EP_HOST 'http://failed.tld/' && \
 									wp config set FORCE_SSL_ADMIN true --raw && \
 									wp config set FORCE_SSL_LOGIN true --raw && \
-									wp config set WP_LOCAL_DEV true --raw && \
+									wp config set FS_CHMOD_DIR 0775 --raw && \
+									wp config set FS_CHMOD_FILE 0664 --raw && \
+									wp config set FS_METHOD direct && \
+									wp config set FS_METHOD direct --raw && \
 									wp config set JETPACK_DEV_DEBUG true --raw && \
-									wp config set SAVE_QUERIES true --raw
+									wp config set SAVE_QUERIES true --raw && \
+									wp config set SCRIPT_DEBUG true --raw && \
+									wp config set WP_AUTO_UPDATE_CORE false --raw && \
+									wp config set WP_CACHE false --raw && \
+									wp config set WP_DEBUG true --raw && \
+									wp config set WP_DEBUG_DISPLAY false --raw && \
+									wp config set WP_DEBUG_LOG true --raw && \
+									wp config set WP_ENVIRONMENT_TYPE local --raw && \
+									wp config set WP_LOCAL_DEV true --raw && \
+									wp config set WP_MAX_MEMORY_LIMIT 4096 --raw && \
+									wp config set WP_MEMORY_LIMIT 4096 --raw
+
 
 			if [[ "$@" == *"spatie/ray"* ]]; then
 				echo
