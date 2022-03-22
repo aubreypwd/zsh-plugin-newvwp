@@ -105,8 +105,7 @@
 									wp config set FORCE_SSL_LOGIN true --raw && \
 									wp config set FS_CHMOD_DIR 0775 --raw && \
 									wp config set FS_CHMOD_FILE 0664 --raw && \
-									wp config set FS_METHOD direct && \
-									wp config set FS_METHOD direct --raw && \
+									wp config set FS_METHOD 'direct' && \
 									wp config set JETPACK_DEV_DEBUG true --raw && \
 									wp config set SAVE_QUERIES true --raw && \
 									wp config set SCRIPT_DEBUG true --raw && \
