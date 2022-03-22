@@ -61,7 +61,7 @@
 
 		local pwd=$(pwd)
 
-		if read -q "choice?Are you sure you want to park ${pwd} and create ./$1? [y/n]: "; then
+		if read -q "choice?Are you sure you want to park '${pwd}' and create '$pwd/$1' and overwrite the database '$1' if there is any? [y/n]: "; then
 			echo
 			echo
 
@@ -82,7 +82,7 @@
 					echo "Installing WordPress in ${pwd}/$1..." && \
 						wp core download && \
 						wp config create --dbuser=root --dbhost="127.0.0.1" --dbname="$1" && \
-						wp db create && \
+						wp db create || true && \
 						wp core install --url="https://$1.test" --title="$1" --admin_user="admin" --admin_email="noreply@example.com" && \
 
 						echo && \
