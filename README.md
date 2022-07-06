@@ -39,6 +39,8 @@ WP_MAX_MEMORY_LIMIT 4096
 WP_MEMORY_LIMIT 4096
 ```
 
+To set these in any install, use the included command `set-debug-constants`.
+
 ## Debug Bar & Development plugins (`--debug-bar`)
 
 - `debug-bar`
@@ -52,6 +54,8 @@ WP_MEMORY_LIMIT 4096
 - `debug-bar-list-dependencies`
 - `debug-bar-remote-requests`
 - `query-monitor`
+
+To install these in any install, use the included command `install-debug-plugins`.
 
 ## Username/Password for Login
 
@@ -115,11 +119,3 @@ antigen bundle ssh://git@github.com/aubreypwd/zsh-plugin-newvwp
 ```
 
 ...and contribute upstream by working in `$HOME/.antigen/bundles/aubreypwd/zsh-plugin-newvwp`.
-
----
-
-## Changelog
-
-### 1.0.0
-
-- First version built for _Five for the Future_; thanks [@WebDevStudios](https://webdevstudios.com/)
