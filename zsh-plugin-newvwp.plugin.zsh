@@ -119,8 +119,7 @@
 									wp config set WP_MAX_MEMORY_LIMIT 4096 --raw && \
 									wp config set WP_MEMORY_LIMIT 4096 --raw
 
-
-			if [[ "$@" == *"spatie/ray"* ]]; then
+			if [[ "$@" == *"--spatie/ray"* ]]; then
 				echo
 				echo "Setting up spatie/ray..."
 					composer init --name="no/installable" -q -n && \
