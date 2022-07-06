@@ -33,10 +33,10 @@ WP_CACHE false
 WP_DEBUG true 
 WP_DEBUG_DISPLAY false 
 WP_DEBUG_LOG true 
-WP_ENVIRONMENT_TYPE local 
+WP_ENVIRONMENT_TYPE 'local'
 WP_LOCAL_DEV true 
-WP_MAX_MEMORY_LIMIT 4096 
-WP_MEMORY_LIMIT 4096 
+WP_MAX_MEMORY_LIMIT 4096
+WP_MEMORY_LIMIT 4096
 ```
 
 ## Debug Bar & Development plugins (`--debug-bar`)
@@ -73,6 +73,10 @@ Here `sitename` will create `sitename.test`.
 --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support.
 --debug-bar  Installs all debug-bar-* plugins and activates them.
 ```
+
+### Mailhog
+
+Use `brew install mailhog && brew services start mailhog && valet proxy mailhog.test http://127.0.0.1:8025` to setup Mailhog on your local, then any emails send from the new site will re-direct email to Mailhog.
 
 ## MySQL
 
