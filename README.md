@@ -103,7 +103,7 @@ This also assumes you are using the `.test` TLD in it's messaging, but you can j
 Using [antigen](https://github.com/zsh-users/antigen):
 
 ```bash
-antigen bundle aubreypwd/zsh-plugin-newvwp@1.0.0
+antigen bundle aubreypwd/zsh-plugin-newvwp
 ```
 
 ## Development
