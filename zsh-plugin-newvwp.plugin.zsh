@@ -114,7 +114,7 @@
 									wp config set WP_DEBUG true --raw && \
 									wp config set WP_DEBUG_DISPLAY false --raw && \
 									wp config set WP_DEBUG_LOG true --raw && \
-									wp config set WP_ENVIRONMENT_TYPE local --raw && \
+									wp config set WP_ENVIRONMENT_TYPE 'local' && \
 									wp config set WP_LOCAL_DEV true --raw && \
 									wp config set WP_MAX_MEMORY_LIMIT 4096 --raw && \
 									wp config set WP_MEMORY_LIMIT 4096 --raw
