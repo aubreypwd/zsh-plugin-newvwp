@@ -12,7 +12,8 @@
 		echo "newvwp example [--flags]"
 		echo
 		echo " --spatie/ray Installs https://spatie.be/products/ray support using Composer."
-		echo " --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support (if you don't use this wp_mail() will be disabled by default)."
+		echo " --mailhog    Installs wp-mailhog-smtp plugin for Mailhog support"
+		echo "              (if you don't use this wp_mail() will be disabled by default)."
 		echo " --debug-bar  Installs all debug-bar-* plugins and activates them."
 		echo
 		echo "Other commands:"
@@ -31,6 +32,12 @@
 	 # @since Wednesday, July 13, 2022
 	 ##
 	function disable-wp-mail {
+
+		if [[ ! -e "wp-config.php" ]]; then
+
+			echo "This does not appear to be the root of a common WordPress install, please run disable-wp-mail where wp-config.php is."
+			return
+		fi
 
 		echo "Disabling wp_mail in wp-config.php" && \
 			echo "<?php function wp_mail() { return false; } @ini_set( 'disable_functions','mail' ); // This should disable all emails." > "disable-wp-mail.php" && \
@@ -105,6 +112,12 @@
 	 # @since Wednesday, July 6, 2022
 	 ##
 	function install-spatie-ray-wp {
+
+		if [[ ! -e "wp-config.php" ]]; then
+
+			echo "This does not appear to be the root of a common WordPress install, please run install-spatie-ray-wp where wp-config.php is."
+			return
+		fi
 
 		echo
 		echo "Setting up spatie/ray..."

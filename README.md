@@ -74,13 +74,27 @@ Here `sitename` will create `sitename.test`.
 
 ```
 --spatie/ray Installs https://spatie.be/products/ray support using Composer.
---mailhog    Installs wp-mailhog-smtp plugin for Mailhog support.
+--mailhog    Installs wp-mailhog-smtp plugin for Mailhog support 
+             (if you don't use this wp_mail() will be disabled by default).
 --debug-bar  Installs all debug-bar-* plugins and activates them.
+```
+
+### Floating Commands
+
+You can use these floating commands (functions) from the root of your WordPress install:
+
+```
+set-debug-constats      (Will just set the constants)
+install-mailhog-plugin  (Will just install the plugin for Mailhog)
+install-spatie-ray-wp   (Will just require spatie/ray and load it in wp-config.php)
+disable-wp-mail         (Will disable wp_mail() in wp-config.php)
 ```
 
 ### Mailhog
 
 Use `brew install mailhog && brew services start mailhog && valet proxy mailhog.test http://127.0.0.1:8025` to setup Mailhog on your local, then any emails send from the new site will re-direct email to Mailhog.
+
+_If you don't use Mailhog we will automatically disable `wp_mail()` for you._
 
 ## MySQL
 
